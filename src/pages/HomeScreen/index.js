@@ -29,7 +29,7 @@ export default function HomeScreen() {
   async function onHandleSubmit() {
 
 
-    const data = await axios.post('https://wk-frontend.herokuapp.com/api/login', { accessToken: token, email });
+    const data = await axios.post('https://wk-back.herokuapp.com/api/login', { accessToken: token, email });
     if (data.data.status === 400) {
       alert("Token de Acesso Invalido \nAcesso ao sistema negado");
     }

@@ -33,7 +33,7 @@ export default function DeleteUserScreen() {
 
 
     e.preventDefault();
-    const data = await axios.delete('https://wk-frontend.herokuapp.com/api/remove', { data: { email: location.state.email } });
+    const data = await axios.delete('https://wk-back.herokuapp.com/api/remove', { data: { email: location.state.email } });
     if (data.data.status === 400) {
       alert("Erro na Remoçao");
 

@@ -24,7 +24,7 @@ export default function HomeScreen() {
       alert("Nome invalido, favor digitar o sobrenome");
     }
     else {
-      const data = await axios.put('https://wk-backend.herokuapp.com/api/register', { name: username, email });
+      const data = await axios.put('https://wk-back.herokuapp.com//api/register', { name: username, email });
       if (data.data.status === 400) {
         alert("Erro na criação de Usuário");
       }

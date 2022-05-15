@@ -27,7 +27,7 @@ export default function UpdateUserScreen() {
   async function loading() {
 
 
-    const data = await axios.post('https://wk-backend.herokuapp.com/api/login', { accessToken: location.state.accessToken, email: location.state.email });
+    const data = await axios.post('https://wk-back.herokuapp.com/api/login', { accessToken: location.state.accessToken, email: location.state.email });
     if (data.data.status === 400) {
       alert("Token de Acesso Invalido \nAcesso ao sistema negado");
 
@@ -48,7 +48,7 @@ export default function UpdateUserScreen() {
       alert("Nome invalido, favor digitar o sobrenome");
     }
     else {
-      const data = await axios.patch('https://wk-backend.herokuapp.com/api/update', { name: username, email: location.state.email });
+      const data = await axios.patch('https://wk-back.herokuapp.com/api/update', { name: username, email: location.state.email });
       if (data.data.status === 400) {
         alert("Erro na atualizacao");
       }
